@@ -86,7 +86,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
---
+-- so if you are thinking ...wft is inccommand? press `:h incc`tab` will give you info on any command
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
@@ -101,8 +101,11 @@ vim.opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+-- anthony ggs issue with 'jj' -- is this a windows thing?
+-- vim.keymap.set('i', 'jj', '<Esc>')
 
 -- Diagnostic keymaps
+-- go to the begginning text and hit * to select and see all instances , then hit esc to unhighlight
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
