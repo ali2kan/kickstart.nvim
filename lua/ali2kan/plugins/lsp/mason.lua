@@ -11,6 +11,8 @@ return {
     -- import mason-lspconfig
     local mason_lspconfig = require("mason-lspconfig")
 
+    local mason_tool_installer = require("mason-tool-installer")
+
     -- enable mason and configure icons
     mason.setup({
       ui = {
@@ -35,6 +37,7 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
+        "rust_analyzer",
         "ansiblels",
         "astro",
         "bashls",
@@ -58,18 +61,23 @@ return {
         "taplo",
         "terraformls",
         "yamlls",
-        "lemminx",
-        "vimls",
-        "rust_analyzer",
       },
     })
+
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
+        "gopls", -- go formatter
+        "goimports", -- go formatter
+        "sqlfmt", -- sql formatter
+        "rustfmt", -- rust formatter
+        "pylint", -- python linter
+        "eslint", -- js linter
       },
     })
   end,
 }
+
