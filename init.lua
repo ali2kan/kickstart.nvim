@@ -103,6 +103,11 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- anthony ggs issue with 'jj' -- is this a windows thing?
 -- vim.keymap.set('i', 'jj', '<Esc>')
+-- example of remaps with fucntions with neovim
+-- you can basically execute any funciton you want
+-- vim.keymap.set('i', 'jk', function()
+--  print 'hello Yoooooo'
+-- end)
 
 -- Diagnostic keymaps
 -- go to the begginning text and hit * to select and see all instances , then hit esc to unhighlight
