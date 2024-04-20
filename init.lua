@@ -74,6 +74,8 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
+-- 'ctrl' + w + v -- opens vertically
+-- 'ctrl' + w + s -- opens horizontally
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
@@ -84,6 +86,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
+--
 vim.opt.inccommand = 'split'
 
 -- Show which line your cursor is on
