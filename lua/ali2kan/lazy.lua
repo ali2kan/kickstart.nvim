@@ -11,9 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("ali2kan.plugins", {
-  checker = {
-    enables = true,
+require("lazy").setup({ { import = "ali2kan.plugins" }, { import = "ali2kan.plugins.lsp" } }, {
+  checker = {    enables = true,
     notify = false,
   },
   change_detection = {
