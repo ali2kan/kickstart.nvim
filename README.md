@@ -5,7 +5,7 @@
 A starting point for Neovim that is:
 
 * Small
-* Single-file
+* Singl -file
 * Completely Documented
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
