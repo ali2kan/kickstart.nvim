@@ -75,9 +75,8 @@ return {
         "sqlfmt", -- sql formatter
         "rustfmt", -- rust formatter
         "pylint", -- python linter
-        "eslint", -- js linter
+        "eslint_d", -- js linter
       },
     })
   end,
 }
-
