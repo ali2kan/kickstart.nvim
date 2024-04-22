@@ -4,6 +4,7 @@ return {
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
+    local fortune = require("alpha.fortune")
 
     -- Set header
     dashboard.section.header.val = {
@@ -36,6 +37,10 @@ return {
       dashboard.button("SPC wr", "󰁯  > Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
+
+    -- Set footer
+    local fortune = require("alpha.fortune")
+    dashboard.section.footer.val = fortune()
 
     -- Send config to alpha
     alpha.setup(dashboard.opts)
