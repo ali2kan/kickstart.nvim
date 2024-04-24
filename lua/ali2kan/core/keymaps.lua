@@ -16,11 +16,15 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 -- keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+-- keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+-- keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 keymap.set("n", "<leader>l", "<C-l>", { desc = "Lazy 💤🐳👾" }) -- decrement
+-- TERMINAL:
+-- keymap.set("n", "<leader>T", "<cmd>lua require('keymaps').split()<CR>", { desc = "Terminal 🧮" }) -- decrement
+keymap.set("n", "<leader>T", "<C-T>", { desc = "Terminal 🧮" }) -- decrement
 
 -- window management
+-- 23
 
 -- set the name for s to "Split windows"
 keymap.set("n", "<leader>s", "<cmd>lua require('keymaps').split()<CR>", { desc = "➕Split windows🪟" })
